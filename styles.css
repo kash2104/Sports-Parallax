@@ -1,0 +1,139 @@
+/* imp lines : 20,28,36-39,42-27,101-107 */
+
+
+*{
+    /* universal selector se margin,padding 0 karo taki sare elements ko margin,padding aap khud de pao and box sizing ko bhi set kar dena  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    /* sara ka sara code wrapper ke andar aana chahiye toh */
+    height: 100vh;
+
+    /* left right scroll nhi chahiye and up down scroll chahiye */
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    /* 3d me khelna hai background vali image door chahiye and foreground vali nazdeek chahiye  */
+    perspective: 10px;
+}
+
+.container{
+    /* container ke parent ka 100% height kiya hai  */
+    height: 100%;
+    
+    /* iske andar 2 img: background & foreground and unn dono ko overlap karvana hai toh position property toh absolute rahegi dono img ki. par absolute hone ke liye parent ki position non static honi chahiye and therefore container ki position relative rakhenge  */
+    position: relative;
+
+    /* iske andar element joh hai usko centre me place karna chahte hai  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 3d behaviour kiske andar continue rakhna hai toh 3d behaviour ko enable rakhne ke liye.
+    
+     DEFINITION: sets whether children of an element are positioned in 3d space or are flattened in teh plane of the element i.e. aapne joh 3d properties parent me lagayi hai agar voh aap child me rakhna chahte ho  */
+    transform-style: preserve-3d;
+
+    /* overlapping ke liye i.e. konsi layer kiske upar aane vali hai */
+    z-index: -1;
+}
+
+.background{
+    /* img ko door le jane ke liye */
+    transform: translateZ(-40px) scale(5);
+
+    /* img ko door hi rakhna hai aur bada karna hai toh  */
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+.background, .foreground{
+    /* dono images ko overlap karana hai toh position property absolute honi chahiye */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+    /* jab humne dono images ko overlap kiya toh layer ke upar layer aa gaya toh konsa layer kiske upar aayeg usko handle karne ke liye  */
+    z-index: -1;
+
+    /* to fit the image in their parent container & we created container because we wanted to make it into flex. the below is used to specify how an <img> or <video> should be resized to fit its container.  */
+    /* object-fit: cover; */
+}
+
+h1{
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgb(0,0,0,0.3);
+}
+
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.secHeading{
+    font-size: 5rem;
+    color: white;
+    padding: 0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+/* jo bhi images humne add ki uske upar uski heading overlap ho rhi hai toh heading ke parent ko position relative deni padegi */
+.bg{
+    position: relative;
+    width: 100%;
+
+    /* jab mein scroll kar rha hoon tab bg image scroll nhi ho rhi voh apni jagah par fixed hai so use. IF IF I don't use background-attachment as fixed then the image will also scroll as scroll down the page toh uske upar text scroll ho rha hai vaisa nhi lagega and HENCE WE USED THE BELOW THING  */
+    background-attachment: fixed;
+
+    /* image bohot badi par hum usko esa set karna chahte hai ki voh humare viewport ko cover kar paye toh  */
+    background-size: cover;
+
+    /* image ko center me lane ke liye  */
+    background-position: center;
+
+    /* saare images ki height bhi fixed hai  */
+    height: 500px;
+
+}
+
+.desc{
+    /* biking,surfing,paragliding ko muje apni images par overlap karana hai toh position badalni padegi */
+     position: absolute;
+     background-color: white;
+     padding: 0.5rem 2.5rem;
+     top: 50%;
+     left: 50%; 
+     transform: translateX(-50%) translateX(-50%);
+     color: black;
+     font-size: 3.5rem;
+     font-weight: 600;
+}
+
+.bg1{
+    background-image: url(https://codehelp-parallax-website.netlify.app/assets/sport-1.jpg);
+}
+
+.bg2{
+    background-image: url(https://codehelp-parallax-website.netlify.app/assets/sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(https://codehelp-parallax-website.netlify.app/assets/sport-3.jpg);
+}
