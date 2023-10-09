@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- breaking the website
+    1.background image(door rahegi toh dheere scroll hogi)
+    2.foregroung image(pass me rahegi toh jaldi scroll hogi)
+    3.text  -->
+
+    <!-- jaise hi scroll kiya toh 
+    1.heading
+    2.background colour
+    3.paragraph 
+        kisi ek particular element ke andar heading and paragraph text dala hai and us parent element ka color change kar diya hai-->
+
+    <!-- text read karne ke baad jaise hi scroll kiya toh joh image aai hai voh fixed  hai and iss fixed image ko ek given height and width ki window me dikha rhe hai naki puri image dikha rhe hai  -->
+</head>
+<body>
+    
+    <div id="wrapper">
+
+        <!-- text ko centre me rakhna toh hume flex chahiye and that's why we created container  -->
+        <div class="container">
+
+            <img src="https://codehelp-parallax-website.netlify.app/assets/background.png" class="background">
+
+            <img src="https://codehelp-parallax-website.netlify.app/assets/foreground.png" class="foreground">
+            <h1>ADVENTURE</h1>
+        </div>
+
+        <section>
+            <h2 class="secHeading">Adventure time</h2>
+            <p class="text">
+                Adventure sports are exhilarating and often adrenaline-pumping activities that involve a degree of risk and physical challenge. Participants in adventure sports seek excitement, outdoor exploration, and a sense of accomplishment. 
+                <br><br>
+                These activities can include mountain biking, paragliding, surfing and many others. Adventure sports provide opportunities to push personal limits, connect with nature, and experience the thrill of overcoming obstacles and embracing the unknown, making them a popular choice for those who crave excitement and adventure in their lives.
+            </p>
+
+            <!-- parallax vala ho gaya. Ab jo bhi image dalenge voh sari images fixed hogi 
+            1.image
+            2.heading
+            3.paragraph -->
+
+            <div class="bg bg1">
+                <h2 class="desc">BIKING</h2>
+            </div>
+
+            <!-- biking ka jo paragraph chahiye usko same styling as the first para toh voh toh bana hua hi hai  -->
+            <p class="text">
+                Mountain biking is an exhilarating outdoor sport that involves riding specially designed bicycles through rugged, natural terrain, often in hilly or mountainous landscapes. Riders navigate a variety of trails, including forest paths, rocky descents, and steep inclines, while using their skills to overcome obstacles like roots, rocks, and jumps.
+                <br><br>
+                Mountain biking combines physical fitness, technical skill, and a deep connection to nature, offering enthusiasts a thrilling way to explore the great outdoors while experiencing the adrenaline rush of downhill descents and the satisfaction of conquering challenging terrain. Whether for recreation or competition, mountain biking provides a dynamic and adventurous experience for riders of all levels.
+            </p>
+
+            <!-- for the third image of  -->
+            <!-- bg2 contains the image so will be different for all  -->
+            <div class="bg bg2">
+                <h2 class="desc">PARAGLIDING</h2>
+            </div>
+
+            <!-- biking ka jo paragraph chahiye usko same styling as the first para toh voh toh bana hua hi hai  -->
+            <p class="text">
+                Paragliding is a thrilling adventure sport that allows individuals to glide through the sky using a lightweight, parachute-like wing known as a paraglider. Participants are harnessed to the paraglider and launch themselves from elevated locations such as hills, cliffs, or mountains. 
+                <br><br>
+                Paragliding offers an incredible sense of freedom and breathtaking panoramic views of the landscape below. It's a unique way to experience the sensation of flying and enjoy the serenity of the open sky, making it a popular choice for those seeking both adventure and a bird's-eye perspective of the world.
+            </p>
+
+            <!-- for the fourth image  -->
+            <div class="bg bg3">
+                <h2 class="desc">SURFING</h2>
+            </div>
+
+            <!-- biking ka jo paragraph chahiye usko same styling as the first para toh voh toh bana hua hi hai  -->
+            <p class="text">
+                Surfing is a water sport that involves riding on the face of ocean waves using a specially designed surfboard. Surfers paddle out into the water, wait for the right wave, and then use their skill and balance to catch and ride the wave as it breaks. 
+                <br><br>
+                Surfing is known for its sense of connection to the sea and the thrill of riding waves, making it a popular and iconic water sport enjoyed by people around the world.
+            </p>
+        </section>
+
+
+    </div>
+</body>
+</html>
